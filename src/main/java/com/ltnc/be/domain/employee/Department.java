@@ -1,0 +1,15 @@
+package com.ltnc.be.domain.employee;
+
+public enum Department {
+    EMERGENCY_DEPARTMENT,
+    INTERNAL_MEDICINE,
+    PEDIATRICS,
+    SURGERY,
+    OBSTETRICS_AND_GYNECOLOGY,
+    CARDIOLOGY,
+    NEUROLOGY,
+    PSYCHIATRY,
+    OPHTHALMOLOGY,
+    DERMATOLOGY,
+    ORTHOPEDICS
+}
