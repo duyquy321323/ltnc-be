@@ -19,9 +19,11 @@ public class AccountController {
   @PostMapping("/login")
   @Operation(tags = "Account APIs") // đánh dấu đây là 1 thành phần của tag Account APIs swagger
   @ResponseStatus(HttpStatus.OK)
-  BaseResponse<LoginResponse> login(@RequestBody LoginRequest request) { // chuyển json thành đối tượng LoginRequest
+  BaseResponse<LoginResponse> login(
+      @RequestBody LoginRequest request) { // chuyển json thành đối tượng LoginRequest
     return BaseResponse.of(accountFacade.login(request));
   }
+
   @PostMapping("/create-employee")
   @Operation(tags = "Account APIs")
   @ResponseStatus(HttpStatus.CREATED)

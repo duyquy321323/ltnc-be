@@ -10,9 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpsertMedicineRequest extends BaseRequest {
-    private String name;
-    private MedicineType medicineType;
-    private MedicineUseType medicalUseType;
-    private String price;
-    private String ingredient;
+  private String name;
+  private MedicineType medicineType;
+  private MedicineUseType medicalUseType;
+  private String price;
+  private String ingredient;
 }

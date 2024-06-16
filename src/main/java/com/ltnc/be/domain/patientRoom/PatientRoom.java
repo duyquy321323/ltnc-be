@@ -7,9 +7,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import java.util.Date;
 
 @Entity
 @NoArgsConstructor
@@ -17,20 +14,20 @@ import java.util.Date;
 @Getter
 @Table(name = "patient_room")
 public class PatientRoom extends BaseEntity {
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "patient_id")
-    private Patient patient;
+  @ManyToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "patient_id")
+  private Patient patient;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "room_id")
-    private Room room;
+  @ManyToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "room_id")
+  private Room room;
 
-    @Column(name = "bed_number")
-    private int bedNumber;
+  @Column(name = "bed_number")
+  private int bedNumber;
 
-    @Column(name = "start_time")
-    private Long startTime;
+  @Column(name = "start_time")
+  private Long startTime;
 
-    @Column(name = "end_time")
-    private Long endTime;
+  @Column(name = "end_time")
+  private Long endTime;
 }

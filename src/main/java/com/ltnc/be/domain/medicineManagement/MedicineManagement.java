@@ -16,23 +16,23 @@ import lombok.Setter;
 @Getter
 @Setter
 public class MedicineManagement extends BaseEntity {
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "medicine_id")
-    private Medicine medicine;
+  @ManyToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "medicine_id")
+  private Medicine medicine;
 
-    @Column(name = "input_quantity")
-    private Long input_quantity;
+  @Column(name = "input_quantity")
+  private Long input_quantity;
 
-    @Column(name = "supplier")
-    private String supplier;
+  @Column(name = "supplier")
+  private String supplier;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
+  @ManyToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "employee_id")
+  private Employee employee;
 
-    @Column(name = "expired_date")
-    private Long expiredDate;
+  @Column(name = "expired_date")
+  private Long expiredDate;
 
-    @Column(name = "code")
-    private String code;
+  @Column(name = "code")
+  private String code;
 }

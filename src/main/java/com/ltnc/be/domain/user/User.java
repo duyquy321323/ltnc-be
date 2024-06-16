@@ -3,7 +3,6 @@ package com.ltnc.be.domain.user;
 import com.ltnc.be.domain.BaseEntity;
 import jakarta.persistence.*;
 import java.util.Date;
-
 import lombok.*;
 
 @Table(name = "users")

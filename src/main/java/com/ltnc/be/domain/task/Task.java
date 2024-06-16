@@ -3,10 +3,9 @@ package com.ltnc.be.domain.task;
 import com.ltnc.be.domain.BaseEntity;
 import com.ltnc.be.domain.employee.Employee;
 import jakarta.persistence.*;
+import java.util.Date;
 import lombok.*;
 
-import java.util.Date;
-    
 @Entity
 @Table(name = "task")
 @Getter
@@ -15,22 +14,22 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Task extends BaseEntity {
-    @Column(name = "start_time")
-    @Temporal(TemporalType.DATE)
-    private Date startTime;
+  @Column(name = "start_time")
+  @Temporal(TemporalType.DATE)
+  private Date startTime;
 
-    @Column(name = "end_time")
-    @Temporal(TemporalType.DATE)
-    private Date endTime;
+  @Column(name = "end_time")
+  @Temporal(TemporalType.DATE)
+  private Date endTime;
 
-    @Column(name = "description")
-    private String description;
+  @Column(name = "description")
+  private String description;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "status")
-    private TaskStatus status;
+  @Enumerated(EnumType.STRING)
+  @Column(name = "status")
+  private TaskStatus status;
 
-    @ManyToOne
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
+  @ManyToOne
+  @JoinColumn(name = "employee_id")
+  private Employee employee;
 }

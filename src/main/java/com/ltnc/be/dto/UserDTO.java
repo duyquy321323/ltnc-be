@@ -26,7 +26,7 @@ public class UserDTO {
         .userEmail(user.getEmail())
         .userDob(user.getDob())
         .userPhoneNumber(user.getPhoneNumber())
-            .name(user.getFullName())
+        .name(user.getFullName())
         .build();
   }
 }

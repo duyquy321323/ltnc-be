@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpsertRoomRequest extends BaseRequest{
-    private Integer roomCapacity;
-    private String roomNumber;
+public class UpsertRoomRequest extends BaseRequest {
+  private Integer roomCapacity;
+  private String roomNumber;
 }

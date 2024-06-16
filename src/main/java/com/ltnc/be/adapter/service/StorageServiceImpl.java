@@ -1,32 +1,32 @@
-//package com.ltnc.be.adapter.service;
+// package com.ltnc.be.adapter.service;
 //
-//import com.amazonaws.HttpMethod;
-//import com.amazonaws.services.s3.AmazonS3;
-//import com.amazonaws.services.s3.model.GeneratePresignedUrlRequest;
-//import com.amazonaws.services.s3.model.ObjectMetadata;
-//import com.amazonaws.services.s3.model.PutObjectRequest;
-//import com.ltnc.be.domain.common.StorageContentType;
-//import com.ltnc.be.domain.common.StorageDomain;
-//import com.ltnc.be.domain.common.StoragePresignedMethod;
-//import com.ltnc.be.domain.exception.ExternalServiceException;
-//import com.ltnc.be.port.service.StorageService;
-//import java.io.ByteArrayInputStream;
-//import java.net.URLConnection;
-//import java.time.Instant;
-//import java.util.Calendar;
-//import java.util.Date;
-//import java.util.UUID;
-//import lombok.RequiredArgsConstructor;
-//import lombok.SneakyThrows;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.beans.factory.annotation.Value;
-//import org.springframework.data.util.Pair;
-//import org.springframework.http.MediaType;
-//import org.springframework.stereotype.Service;
+// import com.amazonaws.HttpMethod;
+// import com.amazonaws.services.s3.AmazonS3;
+// import com.amazonaws.services.s3.model.GeneratePresignedUrlRequest;
+// import com.amazonaws.services.s3.model.ObjectMetadata;
+// import com.amazonaws.services.s3.model.PutObjectRequest;
+// import com.ltnc.be.domain.common.StorageContentType;
+// import com.ltnc.be.domain.common.StorageDomain;
+// import com.ltnc.be.domain.common.StoragePresignedMethod;
+// import com.ltnc.be.domain.exception.ExternalServiceException;
+// import com.ltnc.be.port.service.StorageService;
+// import java.io.ByteArrayInputStream;
+// import java.net.URLConnection;
+// import java.time.Instant;
+// import java.util.Calendar;
+// import java.util.Date;
+// import java.util.UUID;
+// import lombok.RequiredArgsConstructor;
+// import lombok.SneakyThrows;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.beans.factory.annotation.Value;
+// import org.springframework.data.util.Pair;
+// import org.springframework.http.MediaType;
+// import org.springframework.stereotype.Service;
 //
-//@Service
-//@RequiredArgsConstructor
-//public class StorageServiceImpl implements StorageService {
+// @Service
+// @RequiredArgsConstructor
+// public class StorageServiceImpl implements StorageService {
 //  @Value("${amazon.s3.presigned.url.expiration}")
 //  private Long amazonS3PresignedUrlExpiration;
 //
@@ -76,7 +76,8 @@
 //      metadata.setContentLength(file.length);
 //      metadata.setContentType(contentType);
 //
-//      amazonS3.putObject(new PutObjectRequest(amazonS3BucketName, key, fileInputStream, metadata));
+//      amazonS3.putObject(new PutObjectRequest(amazonS3BucketName, key, fileInputStream,
+// metadata));
 //    } catch (Exception e) {
 //      fileInputStream.close();
 //      throw new ExternalServiceException();
@@ -122,4 +123,4 @@
 //  private String buildPresignedUrlKey(String key) {
 //    return String.format("%s/%s", amazonS3PublicUrl, key);
 //  }
-//}
+// }

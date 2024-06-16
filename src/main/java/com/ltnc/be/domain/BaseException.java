@@ -5,7 +5,7 @@ import lombok.NonNull;
 
 @Getter
 public abstract class BaseException extends Exception {
-  private @NonNull final String code; // đánh dấu không được null khi dùng @Valid 
+  private @NonNull final String code; // đánh dấu không được null khi dùng @Valid
 
   public BaseException(@NonNull final String message, @NonNull final String code) {
     super(message);

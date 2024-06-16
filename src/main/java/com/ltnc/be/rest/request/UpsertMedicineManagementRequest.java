@@ -9,11 +9,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
-public class UpsertMedicineManagementRequest extends BaseRequest{
-    private Long medicineId;
-    private Long inputQuantity;
-    private String supplier;
-    private Long employeeId;
-    private Long expiredDate;
-    private String code;
+public class UpsertMedicineManagementRequest extends BaseRequest {
+  private Long medicineId;
+  private Long inputQuantity;
+  private String supplier;
+  private Long employeeId;
+  private Long expiredDate;
+  private String code;
 }

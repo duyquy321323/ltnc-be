@@ -11,5 +11,5 @@ import lombok.Setter;
 @Setter
 @Getter
 public class ResponseLeaveAppRequest extends BaseRequest {
-    private Status status;
+  private Status status;
 }

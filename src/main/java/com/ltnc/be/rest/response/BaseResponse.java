@@ -11,7 +11,7 @@ import lombok.*;
 public class BaseResponse<T> {
   private T data; // request
   private String message; // tin nhắn trả về sau khi response
-  private String stackTrace; // 
+  private String stackTrace; //
   private String exceptionCode;
 
   protected static final String SUCCEED_REQUEST_MESSAGE = "Success";

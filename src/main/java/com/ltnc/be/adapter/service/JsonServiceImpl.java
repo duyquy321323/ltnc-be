@@ -3,7 +3,6 @@ package com.ltnc.be.adapter.service;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.ltnc.be.port.service.JsonService;
-
 import org.springframework.stereotype.Service;
 
 @Service

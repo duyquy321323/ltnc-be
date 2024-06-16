@@ -6,10 +6,9 @@ import com.ltnc.be.domain.medicalTest.MedicalTest;
 import com.ltnc.be.domain.patient.Patient;
 import com.ltnc.be.domain.prescription.Prescription;
 import jakarta.persistence.*;
-import lombok.*;
-
 import java.util.Date;
 import java.util.List;
+import lombok.*;
 
 @Entity
 @Table(name = "medical_record")
@@ -19,30 +18,32 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedicalRecord extends BaseEntity {
-    @Column(name ="diagnostic")
-    private String diagnostic;
-    @Column(name="hospitalized_time")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date hospitalizedTime;
-    @Column(name="leave_time")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date leaveTime;
+  @Column(name = "diagnostic")
+  private String diagnostic;
 
-    @ManyToOne
-    @JoinColumn(name = "patient_id")
-    private Patient patient;
+  @Column(name = "hospitalized_time")
+  @Temporal(TemporalType.TIMESTAMP)
+  private Date hospitalizedTime;
 
-    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinTable(
-            name = "handle_record",
-            joinColumns = @JoinColumn(name = "record_id"),
-            inverseJoinColumns = @JoinColumn(name = "employee_id")
-    )
-    private List<Employee> employees;
+  @Column(name = "leave_time")
+  @Temporal(TemporalType.TIMESTAMP)
+  private Date leaveTime;
 
-    @OneToMany(mappedBy = "medicalRecord")
-    private List<MedicalTest> medicalTests;
+  @ManyToOne
+  @JoinColumn(name = "patient_id")
+  private Patient patient;
 
-    @OneToMany(mappedBy = "medicalRecord", fetch = FetchType.EAGER)
-    private List<Prescription> prescriptions;
+  @ManyToMany(
+      cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+  @JoinTable(
+      name = "handle_record",
+      joinColumns = @JoinColumn(name = "record_id"),
+      inverseJoinColumns = @JoinColumn(name = "employee_id"))
+  private List<Employee> employees;
+
+  @OneToMany(mappedBy = "medicalRecord")
+  private List<MedicalTest> medicalTests;
+
+  @OneToMany(mappedBy = "medicalRecord", fetch = FetchType.EAGER)
+  private List<Prescription> prescriptions;
 }
